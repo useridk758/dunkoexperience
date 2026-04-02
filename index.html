@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunko | Projects</title>
+    <style>
+        :root {
+            --bg: #030712;
+            --accent: #0ea5e9;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            background-color: var(--bg);
+            background-image: radial-gradient(circle at top right, #1e1b4b, transparent);
+            color: #f8fafc; 
+            margin: 0; 
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 { 
+            font-size: clamp(3rem, 8vw, 5rem); 
+            margin: 0;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            padding: 20px; 
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        /* The Interactive Glass Card */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card h3 { 
+            margin: 0 0 10px 0; 
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .card p { 
+            font-size: 0.95rem; 
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .visit-link {
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .visit-link::after {
+            content: ' →';
+            transition: margin-left 0.3s;
+        }
+
+        .card:hover .visit-link::after {
+            margin-left: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .email-btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .email-btn:hover {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 20px var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DUNKO</h1>
+        <p style="color: #64748b;">Full-Stack Developer & Creator</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <a href="https://useridk758.github.io" target="_blank" class="card">
+                <h3>useridk758</h3>
+                <p>A GitHub-hosted space exploring core web functionalities and design.</p>
+                <div class="visit-link">Visit Website</div>
+            </a>
+
+            <a href="https://reulus.onrender.com" target="_blank" class="card">
+                <h3>Reulus</h3>
+                <p>Dynamic web application built for performance and modern user experiences.</p>
+                <div class="visit-link">Visit Website</div>
+            </a>
+
+            <a href="https://freezenova.ai/chat/" target="_blank" class="card">
+                <h3>FreezeNova AI</h3>
+                <p>Custom AI chat interface integration for intelligent interactions.</p>
+                <div class="visit-link">Visit Website</div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="margin-bottom: 25px; opacity: 0.7;">Interested in working together?</p>
+        <a href="mailto:gandonnazar22@gmail.com" class="email-btn">Hire Dunko</a>
+    </footer>
+
+</body>
+</html>
